@@ -35,7 +35,7 @@ abstract class TaskDatabase : RoomDatabase() {
             val dao = database.get().taskDao()
             applicationScope.launch {
                 dao.insertTask(Task("Unstoppable"))
-                dao.insertTask(Task("Positive"))
+                dao.insertTask(Task("Positive", important = true))
                 dao.insertTask(Task("Keep it up"))
                 dao.insertTask(Task("Keep up the hard work"))
                 dao.insertTask(Task("Positive"))
