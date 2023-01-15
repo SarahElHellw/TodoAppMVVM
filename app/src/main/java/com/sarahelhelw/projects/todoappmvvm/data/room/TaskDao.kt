@@ -18,6 +18,6 @@ interface TaskDao {
     // in Room, a function that is returning a flow doesn't
     // need a suspend modifier
     // Flow can be only collected inside a coroutine
-    @Query("SELECT * FROM tasks_table")
-    fun getTasks(): Flow<List<Task>>
+    @Query("SELECT * FROM tasks_table WHERE name LIKE '%' || :searchQuery || '%' ")
+    fun getTasks(searchQuery: String): Flow<List<Task>>
 }
