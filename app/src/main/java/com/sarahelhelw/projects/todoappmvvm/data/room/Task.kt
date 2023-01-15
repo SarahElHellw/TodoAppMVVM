@@ -1,4 +1,4 @@
-package com.sarahelhelw.projects.todoappmvvm.data
+package com.sarahelhelw.projects.todoappmvvm.data.room
 
 import android.os.Parcelable
 import androidx.room.Entity
